@@ -1,0 +1,185 @@
+<!DOCTYPE html> {% load staticfiles %}
+
+<html>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reqwest/2.0.5/reqwest.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.js"></script>
+  <style media="screen">
+    .ui.fluid.card {
+      margin: 5px 0;
+      border-radius: none;
+      box-shadow: none
+    }
+
+    #button {
+      z-index: 999;
+      position: fixed;
+      left: 80%;
+      top: 90%;
+    }
+
+    .ui.fixed.something.menu {
+      position: fixed;
+      top: 50px;
+    }
+  </style>
+</head>
+
+<body id="app">
+  <div v-show="showMenu" transition="menu" class="ui animated fixed fluid vertical something menu ">
+    <a v-on:click="chozen = 'all'" class="item">All</a>
+
+    <a class="item">Popular</a>
+
+    <a v-on:click="chozen = 'editors_choice' " class="item">Editor</a>
+  </div>
+
+
+  <div class="ui fixed inverted red borderless menu">
+    <div v-on:click="showMenu = !showMenu" class="header item">
+      <i class="icon tiny ellipsis vertical"></i> 10MINs
+    </div>
+
+    <div class="right menu">
+      <div class="item">
+        <button class="ui tiny inverted circular button" type="button" name="">Login</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- v-if="!opps" -->
+  <div class="ui cards">
+
+    <div v-for="vid in filtered" class="ui fluid card">
+      <div class="content">
+        <h4 class="header"> {{ vid.title }} </h4>
+        <div class="left floated meta">{{ vid.content|limitBy 30 }}</div>
+      </div>
+      <div class="image">
+        <img :src="vid.url_image" style="height:200px;object-fit: cover;">
+      </div>
+      <div class="extra content">
+        <span class="right floated">
+                      <i class="heart outline like icon"></i>
+
+                    </span>
+        <i class="comment outline icon"></i> 3
+      </div>
+
+      <div class="ui divider"></div>
+    </div>
+
+  </div>
+
+  <button id="button" class="btn-floating btn-large red" type="button" name="button">
+            <i class="icon small pencil"></i>
+        </button>
+
+  <script>
+    vm = new Vue({
+      el: "#app",
+      data: {
+        showMenu: false,
+        chozen: 'all',
+        vids: [{
+            "id": 1,
+            "title": "Hic atque fuga rerum est. Fugiat ab ut debitis consequuntur et.",
+            "content": "Quo eos doloremque aut sed sit adipisci praesentium. In nobis aliquid illo ut et et ut magnam. Doloremque voluptatum repellendus nisi omnis nihil dolorum perspiciatis. Iste id nam id.\nVoluptas mollitia ea voluptas quo ea. Deleniti ut iusto consequuntur aut. Libero quis vel sint enim porro at. Voluptatem nulla sed explicabo.\nVel aut tenetur corporis maxime consectetur. Minus impedit saepe quo et ut. Quasi totam dolore perferendis vel velit perspiciatis.\nQuia ut sint ab odio accusantium. Est et sit odio incidunt soluta ut aut sunt. Cum dolores pariatur mollitia nemo aut quidem libero iusto. Dignissimos reiciendis neque est quibusdam velit nesciunt.\nCum nihil animi qui ut est. Harum et quo aut error sit ut.\nCum veritatis ipsum saepe. Ut rerum quo natus sit voluptatum ex. Vel dignissimos illo iure provident. Ipsa non rerum praesentium rerum.\nUllam dignissimos nemo officiis sapiente quo nobis. Dolorem rerum autem voluptates sit fugit architecto voluptas reprehenderit. Consequatur culpa molestiae voluptate recusandae. Numquam tempore qui maxime repellat reprehenderit autem soluta.\nTemporibus quidem doloremque a mollitia voluptatem quaerat. Ipsa quas aut et cumque voluptatem velit odio. Ad voluptatibus dolorum maxime et.\nSint recusandae rerum voluptatum aut provident dolor qui. Est assumenda doloremque sed fugiat quibusdam voluptatem. Quo eveniet veniam odio. Qui ipsum voluptatum dolorum sed.\nBeatae exercitationem repudiandae consequatur enim id vel. Vitae praesentium consectetur aut odit dolore cum ut aperiam.\nAut optio voluptas veniam dolorem consequatur aut laboriosam illo. Placeat error ad neque tenetur nisi placeat. Ad dolores molestiae explicabo dolorem. Animi et fuga rem in nihil et porro.\nQuam autem eos magni iusto. Sed quo esse aliquam velit. Dicta est omnis vel dolores quibusdam quas velit. Sint facilis maxime odit aut dolorem.\nQuia sed animi voluptatem maxime nemo saepe. Qui et hic saepe maiores et. Reiciendis saepe distinctio enim explicabo voluptates rerum. Ratione qui quod ratione voluptatum praesentium qui.\nSed tempore provident facilis nesciunt eos ad velit dolores. Iste ea aut voluptatem. Consequuntur autem quasi libero perspiciatis.\nOmnis ut voluptas sint a eaque ducimus laborum quia. Ut voluptas quo sequi repudiandae inventore modi iste. Et illo deleniti at ratione dolores.\nEveniet tempore repellat sint quos qui eius aperiam ea. Modi voluptates qui vel sint iusto ea fugit.\nPariatur et eos iusto et odit nihil. Quis nostrum officiis temporibus fugit. Est deserunt expedita ullam omnis voluptatem.\nAsperiores voluptas et asperiores ipsam. Id id voluptatem veritatis commodi porro repellendus illo. Sequi fuga aspernatur et quis. Nulla voluptatem sit mollitia eveniet consectetur repudiandae harum.\nIllum quasi quia fuga totam unde qui. Perspiciatis officia et earum natus porro modi nesciunt. Dolorem debitis quam dolorem id iusto neque.\nQuasi et tempore aliquid illo reprehenderit fugit et. Consequatur eum consequuntur est quas rem.",
+            "url_image": "images/mill-1.jpg",
+            "cover": null,
+            "editors_choice": true
+          },
+          {
+            "id": 2,
+            "title": "Dolorum non in et rerum laudantium eveniet quasi. Harum laboriosam provident velit qui.",
+            "content": "Dolorum voluptatem rerum natus fugit ut omnis alias aut. Qui iure eaque quia at odio nemo. Consequuntur laudantium perferendis odio.\nVoluptas et aperiam nihil. Sed possimus aliquid et ipsa laudantium sint. Rerum dolor occaecati qui perspiciatis animi non. Impedit aut inventore sed recusandae.\nSunt qui aspernatur quia. Voluptas vero laboriosam sapiente dolores nesciunt. Consequatur quae nisi quisquam aut ab dolores. Facere ex ab qui explicabo ea fuga ut.\nExplicabo itaque officia ullam temporibus alias. Enim iste esse ducimus. Porro enim ratione excepturi tenetur dolores eveniet eum. Magnam est consequatur ut quae perspiciatis et. Hic ut placeat doloremque molestiae aut cumque rerum est.\nAccusantium illum minus sunt fuga. Consectetur quae doloribus harum unde sed est consequatur expedita. Aut inventore iure in ut sapiente.\nNeque illo tempora facilis distinctio impedit odit. Sunt eaque illo alias in aliquam ea. Deleniti officia fuga non consectetur sed aut. Unde ea voluptatem similique blanditiis a aspernatur pariatur et.\nQuia aut quia odio dolore consequatur quis et sunt. Aut totam necessitatibus ea quibusdam minima delectus. Autem quia dolor laudantium magni qui ipsum nesciunt provident.\nOmnis et voluptas cumque quibusdam consequatur dolore in. Iusto quis eum aut ut unde. Rerum odit est est repudiandae asperiores nulla eum. Labore inventore a autem tempore aliquid magnam velit autem.\nCorrupti est minima reprehenderit iste ut. Aliquam natus cumque rerum placeat placeat. Blanditiis explicabo ipsa molestiae enim.\nDistinctio aspernatur quas quaerat tempore non. Voluptatum assumenda non et qui saepe sint. Sequi sunt ullam quo officiis. Quo officiis ipsam voluptas aut. Soluta eveniet amet rerum.\nFacere ea repellat dignissimos fuga. Animi ab quidem magni sed provident a est. Explicabo excepturi harum assumenda architecto.\nIncidunt corporis sequi provident iste. Dignissimos ut nostrum dicta libero itaque vel hic. Eos repellat eum sequi expedita officia.\nDelectus itaque quia exercitationem. Deleniti praesentium quia sequi quos voluptates. Ea dicta consequatur tempore. Quibusdam ut fuga dolores aut ea cum.\nConsequatur provident sit repellat soluta doloribus quo corporis. Labore officiis quae expedita placeat exercitationem numquam dolores. Architecto magnam similique ut temporibus officiis. Ut dignissimos exercitationem animi laborum omnis.\nQuis eos optio quas nam aut. Pariatur ab molestiae distinctio. Non hic ullam voluptas consequatur porro hic et. Voluptatibus officiis molestiae quasi exercitationem molestiae facilis. Mollitia ut aut nesciunt eos assumenda perspiciatis.\nSed vel deleniti sint temporibus eligendi dolore. Voluptatem et rerum vel.\nFugiat sed earum consequuntur dicta. Non quia maxime veniam laboriosam a quia. Exercitationem molestiae dolorem totam minus ad ipsam doloribus.",
+            "url_image": "images/mill-2.jpg\n",
+            "cover": null,
+            "editors_choice": false
+          },
+          {
+            "id": 3,
+            "title": "Consectetur est fugiat aut quasi. Autem quidem amet quo dolor.",
+            "content": "Labore quos quas voluptatibus consequuntur provident. Culpa tenetur quo eum est blanditiis beatae. Facilis deserunt cum nam veniam assumenda accusamus molestiae. Assumenda esse qui repudiandae aliquid repellat quas commodi.\nDolorem corporis et a tempore. Quibusdam consequatur exercitationem odit et maiores. In ducimus cupiditate voluptates dolorem. Corrupti aut dolore harum aliquid non dolore adipisci.\nMollitia qui consequatur qui neque sed quasi culpa. Nihil natus corrupti ipsam tempora et nihil. Porro voluptas in vero totam itaque quisquam enim commodi. Veniam velit iste numquam sint nulla est voluptas.\nAperiam ad vel adipisci repudiandae. Deleniti ratione velit aut consectetur est magnam. Earum consequatur aut placeat totam sed.\nVoluptatibus similique quisquam sapiente dolores consequuntur sed quia. Modi omnis non consequatur dolor. Consequuntur consectetur animi repellendus similique ut deleniti. Officiis aut eos dolor totam autem expedita.\nSunt qui et asperiores impedit molestiae accusantium. Corrupti eius commodi pariatur eum non iste.\nFugiat dolores et doloremque qui aperiam. Velit est impedit fuga. Sit quas iusto reprehenderit fugiat amet dicta eum.\nVoluptas voluptatem recusandae omnis adipisci sit. Temporibus animi sequi fugiat repellendus. Iure aut rem deleniti.\nDeleniti perspiciatis voluptatem exercitationem aut omnis laborum. Ducimus delectus molestias ut sed ut distinctio qui. Debitis at voluptatem dolor ipsa debitis dolor rerum. Magnam enim dicta distinctio totam omnis necessitatibus eos.\nVero perspiciatis commodi optio officiis esse a. Aspernatur et dicta dolores similique aliquam minus accusamus. Quia et pariatur sapiente nobis doloremque nihil. Itaque eos sunt quis qui dolore.\nEt in quo culpa quisquam consequuntur ipsa beatae aut. Delectus sit porro voluptatem aut. A omnis reiciendis eaque aut officiis qui aut.\nUnde eum porro quis praesentium minima iusto. Quam eius optio quo suscipit inventore. Ea quisquam id sit rem natus vero.\nMolestiae dicta id nesciunt dolores pariatur assumenda. Est omnis et magnam exercitationem.\nEt eos velit rerum et esse mollitia voluptas. Non quas accusantium deleniti repudiandae enim. Ut accusantium rerum non quaerat. Deleniti voluptatem cupiditate ut in culpa sit. Esse veritatis maiores quisquam et harum fugiat.\nQuia quaerat sunt explicabo dolores voluptatibus quis perferendis. Aut sit animi voluptatem aut in sunt. Omnis a qui aut nihil sit.\nFacere ut et iste nemo fuga consequatur maiores. Aut atque voluptates provident molestiae eveniet dicta. Labore consequatur ratione necessitatibus. Dolores tempora iste dolorum vel nemo. Sed nisi quod eligendi sit eveniet et accusamus.\nQuis sit esse qui sed assumenda quaerat. Nam ipsam placeat reiciendis.\nNihil nesciunt aspernatur nemo delectus quia. Ut atque fugit quia dolorem omnis in.",
+            "url_image": "images/mill-3.jpg\n",
+            "cover": null,
+            "editors_choice": false
+          },
+          {
+            "id": 4,
+            "title": "Ab ut ut incidunt nihil. Vitae quia perferendis praesentium alias voluptas.",
+            "content": "Et voluptatibus eos eos quos repellendus. Soluta magnam sit voluptate ipsum qui occaecati. Cumque quae natus voluptatem iste.\nUt quis unde repellat sed. Cupiditate iste modi et beatae nihil sint. Facere consequatur dolores qui ullam non rem et aspernatur. Quia necessitatibus est suscipit cupiditate eos qui voluptatem dolores.\nDolor autem in ut distinctio est tenetur. Saepe voluptate laboriosam et earum rem aperiam explicabo totam. Ratione perspiciatis et ipsam porro sequi itaque.\nInventore ut id incidunt eos. Necessitatibus odio natus quis harum minus. Voluptates esse necessitatibus ut minima suscipit. Unde facilis rerum nobis quam ut quasi.\nAut quis nostrum quasi voluptatem incidunt. Cum repudiandae veniam error voluptate qui iusto necessitatibus. At reprehenderit dignissimos nisi ipsam. Qui id quia alias aut ipsum.\nDolor laborum debitis rerum placeat. Laborum labore quam quia officia.\nNam accusantium incidunt et excepturi repellat nisi pariatur. Autem assumenda tempora alias itaque ut. Facere veritatis cupiditate odio ex nam qui consequatur. Voluptas error maxime nemo rerum.\nIste dolor unde tempora consequatur laboriosam deleniti. In sint quia dolore placeat. Ut harum eos aperiam quos quam. Dolores vitae earum harum et et dolorem est.\nNihil cupiditate optio aut aliquid. Quia eum dignissimos nulla minima autem qui. Voluptas omnis qui sit aut minima aperiam.\nVoluptatem voluptatibus cumque qui ut. Et aut voluptatem quod deleniti explicabo. Qui architecto sed voluptatem odit iste aspernatur facilis.\nEum sequi magni dolor recusandae et. Iusto necessitatibus exercitationem asperiores. Odio non voluptate quis vitae laborum quisquam ut commodi.\nDeserunt rem exercitationem consequatur dolorem id in impedit ab. Sit rem quia cupiditate id aliquid aperiam dolor. Velit ea molestiae quod velit et.\nIusto debitis in optio odio similique. In qui explicabo quis est excepturi debitis odio. Consequatur quis vitae laboriosam delectus at porro est sunt.\nLibero veritatis iure qui ab qui commodi et. Ipsum veritatis nihil omnis. Omnis eum iure vero culpa nemo sit maiores. Vitae ut a tempora vel dolorem distinctio. Non velit necessitatibus eum illo et.\nFugiat ea repellendus veritatis omnis vel eius aut. Quibusdam dolorem quos voluptatem velit et velit mollitia recusandae. Exercitationem quia velit dolorem minus temporibus est.\nVel sed ut sed quo repellendus. Rerum ipsum tempore quo quaerat. Itaque dolorem hic voluptate voluptas. Molestiae aut quo aut ex et quaerat odio.\nNesciunt quo eos pariatur expedita error et sequi itaque. Iure odio provident at pariatur. Harum sunt nisi explicabo accusantium doloribus. Autem labore aut ea magni quia debitis autem.\nMollitia qui asperiores molestias mollitia soluta quasi. Est dolore error aut rerum itaque. Reprehenderit voluptates iusto quia laboriosam eius ut cupiditate. Molestias odit sed incidunt consectetur beatae quae.",
+            "url_image": "images/mill-4.jpg\n",
+            "cover": null,
+            "editors_choice": true
+          },
+          {
+            "id": 5,
+            "title": "Officiis placeat iste reiciendis quasi esse.",
+            "content": "Odit vel quidem in molestiae. Iusto quam nisi ea. Rerum dolorum placeat aspernatur dicta dolores voluptas autem optio. Sunt voluptas quaerat molestiae nisi reprehenderit suscipit nihil.\nEt nam sunt fugiat rerum. Sed velit sed dolores corrupti praesentium ut. Delectus minima provident odio est sint ipsum quis. Ratione dolor autem fugit quos.\nUt aliquid molestiae distinctio veritatis nemo debitis qui. Consequatur nisi eos placeat omnis.\nNeque aut aliquid incidunt labore suscipit perferendis. Aperiam repellat ratione maiores ut. Distinctio molestias voluptas error impedit. Veniam alias consectetur temporibus.\nConsequatur et magni sint ex quisquam eligendi commodi. Voluptas ab magni aut reiciendis vitae vero qui.\nNobis et deleniti cum qui. Dolor sapiente voluptates dignissimos ad voluptatem. Voluptatem aut et provident temporibus ducimus nemo pariatur odit. Quis ut dolorem quaerat vitae beatae labore quia eveniet.\nConsectetur id nesciunt est eius atque et. Similique alias reprehenderit at ut sint assumenda qui sapiente. Distinctio sit blanditiis rerum qui et omnis quae. Quas excepturi earum possimus et reiciendis earum.\nExercitationem in quasi animi consequatur minima qui aliquid repudiandae. Quas repellendus enim sunt nulla molestias cupiditate. Omnis alias asperiores numquam id consequatur magnam rerum omnis. Quia est rerum et ratione reiciendis ipsum sed ipsa.\nEligendi et architecto ratione enim et aut. Quam quibusdam itaque aspernatur nostrum reiciendis ut nobis. Dolorem voluptatem odio ut voluptas sequi. Vitae ipsum harum fugit dolores.\nLabore consectetur voluptatibus et minima. Est architecto sunt rerum ea. Ut eos voluptatum fuga repellat dolorem repellendus. Corporis voluptatum corrupti non asperiores est vitae.\nIn dicta aperiam repudiandae facilis. Nulla autem accusantium quasi dicta aperiam impedit eum. Eveniet sapiente laborum reprehenderit dolor.\nDolore aliquam magnam ullam odit maiores fugit. Adipisci tempore occaecati provident facere distinctio nihil. Perferendis commodi odit consequatur voluptatem deleniti. Qui dolorem maiores exercitationem id est rerum.\nCulpa magnam saepe et omnis ut corporis aut. Est voluptatem sed iste et. Tempore unde et eligendi laboriosam illum.\nOccaecati incidunt optio molestias expedita eos id officiis. Est vero ab quo est fugiat.\nTenetur dolorem qui eius repudiandae nisi ducimus at. Omnis et suscipit quo qui quas ea.\nQuas ad nam expedita. Voluptas eius quam unde odit animi sint voluptatem.\nId voluptas ex ea omnis adipisci eos consequuntur. Rerum quam sit libero voluptates. Aut voluptatem cum officia eum quo qui. Iusto nisi porro ratione eos voluptatem nulla.\nAb possimus corporis vero voluptate dolores impedit sit. Rerum dolore id est veritatis eum omnis ratione. Omnis quidem necessitatibus similique ab. Iste quisquam placeat repudiandae aliquid temporibus iusto.",
+            "url_image": "images/mill-5.jpg\n",
+            "cover": null,
+            "editors_choice": true
+          },
+          {
+            "id": 6,
+            "title": "Rerum modi harum doloribus minus corrupti eius.",
+            "content": "Est similique aspernatur rem tempore. Labore rerum fugiat praesentium ratione. At rerum maiores eligendi qui sed est.\nAut eum consequuntur deserunt eos id esse. Fugiat assumenda accusantium exercitationem. Veritatis ut ut maxime qui voluptas suscipit sint.\nQuia harum vitae dolor incidunt cumque. Quidem eos eos ipsum quam recusandae quae odio in. Dolorum quis consequatur reiciendis est.\nIpsam optio quia illo maiores inventore ut. Magnam nihil dolore incidunt eos minus. Magni consequatur incidunt debitis sit perspiciatis.\nIllum ut praesentium ad quasi. Minus ipsum voluptas nihil provident saepe. Aut eaque corrupti praesentium voluptates.\nModi et ea hic tenetur omnis. Rerum est illum quo vitae animi sequi assumenda. Eligendi ut consequatur ut sint. Excepturi illum sit adipisci dolorum ipsa fugit enim.\nRatione rem id eos quisquam praesentium et. Quia laudantium vel consequatur assumenda sunt dicta. Sed quae eligendi omnis qui. Non quo facilis earum veritatis rerum.\nArchitecto adipisci ad quaerat unde eaque qui. Sit et consectetur et perspiciatis culpa in. Quia laborum corporis qui rerum.\nEt blanditiis rerum quo ut omnis neque vel vero. Ipsam maxime est quidem. Sunt repellendus quasi non odio perferendis incidunt. Nisi quas quas ad aut.\nQui nulla est dolorem corporis rerum. Voluptatum possimus delectus delectus consequuntur quos provident. Est ex exercitationem dolorem et.\nSit labore ipsum ea ab ducimus ex fuga illum. Nobis consequatur ut dolorem quia nemo. Ea et optio aut fugiat officiis. In unde voluptatum culpa voluptatem aut autem.\nVitae distinctio aut autem et et. Et quo repellat qui nobis illo mollitia illo veniam. Occaecati quia reiciendis aspernatur.\nAspernatur beatae accusantium enim neque eum blanditiis. Occaecati doloremque consectetur eum iure. Reprehenderit quia qui molestias temporibus voluptatibus. Soluta tempora occaecati beatae debitis aut a aspernatur qui.\nRerum cum et quia qui pariatur tenetur perspiciatis vel. Asperiores non assumenda accusantium iure sed dolor. Magnam temporibus atque maiores modi.\nQuam rerum eligendi nulla et. Excepturi nam consectetur at dolor et et. Incidunt omnis aut qui dignissimos consequatur eligendi eligendi.\nSoluta autem eligendi corporis et atque sed vel aut. Consectetur explicabo temporibus qui quod. Non quis enim officia nulla cupiditate repudiandae iste.\nQuis molestiae magni et minus quia ea consequatur. Aut ratione natus expedita ullam. Ut ipsum laboriosam vitae consequuntur sapiente et. Consequatur velit qui enim velit.\nSuscipit ut itaque a culpa. Temporibus accusantium blanditiis dolor doloribus repudiandae nulla facilis saepe. Dolores doloribus minus deserunt accusamus sed.\nOccaecati doloremque vitae rerum corporis dolorum praesentium est id. Sint eos modi suscipit eos quaerat sed. Dolores eum suscipit quod et voluptas voluptatem suscipit.",
+            "url_image": "images/mill-6.jpg\n",
+            "cover": null,
+            "editors_choice": false
+          },
+        ]
+      },
+
+      // methods:{
+      //     getData:function () {
+      //         var self = this;
+      //         reqwest({
+      //             url:'http://127.0.0.1:9000/api/video/',
+      //             type:'json',
+      //             success:function (resp) {
+      //                 self.vids = resp
+      //             },
+      //
+      //         })
+      //     }
+      // },
+      computed: {
+        filtered: function() {
+          var self = this
+          if (self.chozen == 'editors_choice') {
+            var newList = self.vids.filter(function(vid) {
+              return vid.editors_choice == true
+            })
+            return newList
+          } else {
+            return self.vids
+          }
+
+        }
+      },
+      transitions: {
+        menu: {
+          enterClass: 'bounceInDown',
+          leaveClass: 'bounceOutUp'
+        }
+      },
+
+      ready: function() {
+        this.vids
+      }
+    })
+  </script>
+</body>
+
+</html>

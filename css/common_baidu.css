@@ -1,0 +1,35 @@
+@media only screen and (min-width: 750px) and (max-width: 1000px){
+	.ipad-container{
+		display: block;
+	}
+	.mobile-container{
+		display: none;
+	}
+	.pc-container{
+		display: none;
+	}
+}
+@media only screen and (max-width: 750px) {
+	.ipad-container{
+		display: none;
+	}
+	.mobile-container{
+		display: block;
+	}
+	.pc-container{
+		display: none;
+	}
+}
+@media only screen and (min-width: 1000px) and (max-width: 1920px) {
+	.ipad-container{
+		display: none;
+	}
+	.mobile-container{
+		display: none;
+	}
+	.pc-container{
+		display:block;
+	}
+}
+
+

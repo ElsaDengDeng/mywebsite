@@ -1,0 +1,91 @@
+body {
+    background: #f5f5f5;
+}
+header img, header ul, header nav, header div, header span, header a, header i, header h3 {
+	white-space: nowrap;
+	text-decoration: none;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: middle;
+	box-sizing: border-box;
+	font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, 宋体, sans-serif;
+}
+
+blockquote, body, button, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,宋体,sans-serif;
+}
+
+a, dd, div, dl, i, img, input, li, p, span, ul {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+a, a:hover, a:link, a:visited {
+    border: 0 none;
+}
+
+a {
+    text-decoration: none;
+}
+ol, ul {
+	list-style: none;
+}
+
+a,a:hover,a:visited{
+	border: 0 none;
+}
+
+img, input, label, select {
+    vertical-align: middle;
+}
+fieldset, img {
+    border: 0;
+}
+button, h1, h2, h3, h4, h5, h6, input, select, textarea {
+    font-size: 100%;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+address, cite, dfn, em, i, var {
+    font-style: normal;
+}
+#container>.wrap:after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+.mar-t20 {
+    margin-top: 20px!important;
+}
+.w-1000 {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both;
+}
+#main {
+    width: 776px;
+}
+.f_r {
+    float: right;
+}
+
+
+#aside {
+    width: 210px;
+}
+.f_l {
+    float: left;
+}
+
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

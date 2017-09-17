@@ -1,0 +1,288 @@
+html,body{
+	height: 100%;
+}
+body{
+	font:12px arial;
+	margin:0;
+	padding: 0;
+}
+input{
+	outline: none;
+}
+.pc-container{
+	position: relative;
+	min-width: 1000px;
+	min-height: 600px;
+	height: 100%;
+}
+header{
+	overflow: hidden;
+}
+header nav{
+	/*position: absolute;*/
+	float: right;
+	margin:19px 0 5px 0;
+	padding: 0 142px 0 0;
+}
+
+header nav a{
+	float: left;
+	margin-left: 20px;
+	color: #333;
+	font-weight: bold;
+	line-height: 24px;
+	font-size: 13px;
+	text-decoration: underline;
+}
+header nav a:hover{
+	color: #00c;
+}
+/*设置下拉菜单*/
+.setting-menu{
+	position: absolute;
+	width: 46px;
+	height: 24px;
+	right: 75px;
+	text-align: center;
+	font-weight: normal;
+}
+.setting-menu a{
+	text-decoration: none;
+	margin:0px;
+}
+.setting-menu:hover .baidu-setting{
+	display: block;
+}
+.setting-menu .baidu-setting{
+	position: absolute;
+	top: 25px;
+	left:-16px;
+	width: 60px;
+	border:1px solid #ddd;
+	box-shadow: 1px 1px 5px #ddd;
+	z-index: 99;
+	display: none;
+}
+.setting-menu .baidu-setting a{
+	display: inline-block;
+	width: 100%;
+	color: #333;
+}
+.setting-menu .baidu-setting a:hover{
+	color: #ffffff;
+	background:#3385ff;
+}
+.setting-menu .icon-trangle{
+	top: -11px;
+	left: 25px;
+	width: 0;
+	height: 0;
+	display: block;
+	position: absolute;
+	border: 5px solid transparent;
+	border-style: dashed dashed solid dashed;
+	border-bottom-color: #d8d8d8;
+}
+.setting-menu .icon-trangle:after{
+	content: '.';
+	top: -4px;
+	left: -5px;
+	width: 0;
+	height: 0;
+	display: block;
+	position: absolute;
+	border: 5px solid transparent;
+	border-style: dashed dashed solid dashed;
+	border-bottom-color: #ffffff;
+}
+/*更多产品*/
+header nav .more{
+	position: absolute;
+	right: 10px;
+	width: 60px;
+	height: 23px;
+	float: left;
+	color: #fff;
+	background: #38f;
+	line-height: 24px;
+	font-size: 13px;
+	text-align: center;
+	overflow: hidden;
+	border: 1px solid #38f;
+	margin-left: 19px;
+	margin-right: 2px;
+	text-decoration: none;
+}
+header nav .more:hover{
+	background: #fff;
+	color: #000;
+}
+
+.more-product{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 89px;
+	border-left: 1px solid #ddd;
+	background-color: #f9f9f9;
+	display: none;
+	z-index: 999;
+	overflow: scroll;
+}
+.more-product ul{
+	padding: 0px 5px 0 5px;
+	text-align: center;
+
+}
+.more-product li{
+	position: relative;
+	height: 60px;
+	padding-top:10px;
+	border-bottom: 1px solid #ddd;
+}
+.more-product .more-sub-btn{
+	height: 20px;
+}
+.more-product .more-sub-btn:hover{
+	text-decoration: none;
+}
+.more-product a{
+	color: #333;
+	text-decoration: none;
+}
+.more-product a:hover{
+	text-decoration: underline;
+	/*display: block;*/
+
+}
+.more-product .more-all{
+	border: none;
+	text-decoration:underline;
+}
+.more-product span{
+	width: 36px;
+	height: 36px;
+	display:block;
+	margin:0 auto;
+	margin-bottom: 5px;
+	background: url(../images/bdbri_icons.png)  no-repeat;
+	cursor: pointer;
+}
+.more-product .more-sub-one{
+	background-position: -72px 0;
+}
+.more-product .more-sub-two{
+	background-position: -112px 0px;
+}
+.more-product .more-sub-three{
+	background-position: -36px 0;
+}
+.more-product .more-sub-four{
+	background-position:-146px 0;
+}
+.more-product .more-sub-five{
+	background-position:-183px  0;
+}
+/*主体部分*/
+.content{
+	text-align: center;
+	position: relative;
+	top: 38.2%;
+}
+.content .search-form{
+	height: 191px;
+	top: -191px;
+	position: relative;
+}
+.content form{
+	position: relative;
+	z-index: 100;
+	margin:22px auto 0;
+	width: 647px;
+}
+.content img{
+	width: 270px;
+	height: 129px;
+}
+.content .search-input{
+	width: 539px;
+	height: 28px;
+	border: 1px solid #ddd;
+	padding: 3px 0 3px 7px;
+	border-right-width: 0px;
+	vertical-align: middle;
+	line-height: 18px;
+	float: left;
+	height: 36px;
+}
+.content .search-input:hover{
+	border-color: #999 transparent #b3b3b3 #999;
+}
+.content .search-input:focus{
+	border-color: #4791ff transparent #4791ff #4791ff;
+}
+.content .search-btn{
+	width: 100px;
+	height: 44px;
+	color: #ffffff;
+	font-size: 15px;
+	letter-spacing: 1px;
+	background: #3385ff;
+	border: 1px solid #2d78f4;
+	vertical-align: middle;
+	cursor: pointer;
+	float: left;
+}
+.content .search-btn:hover{
+	background-color: #317ef3;
+}
+
+.content .icon-pic{
+	z-index: 1;
+	position: absolute;
+	left: 80%;
+	width: 18px;
+	height: 16px;
+	top: 10px;
+	background:#fff url(../images/icon-pic.png)  no-repeat;
+	cursor: pointer;
+	float: left;
+}
+.content .icon-pic:hover{
+	background-position: 0 -20px;
+}
+/*底部信息*/
+.footer{
+	position: absolute;
+	line-height: 22px;
+	top: 80%;
+	text-align: center;
+	width: 100%;
+}
+.footer p{
+	position: relative;
+	text-align: center;
+	color: #999;
+}
+.footer p a{
+	color: #999;
+}
+.footer .copy_right a{
+	color: #999;
+}
+.footer .c-icon-icrlogo,.icon-copyright{
+	background: url(../images/icons.png) no-repeat;
+	position: absolute;
+	top: 2px;
+	width: 14px;
+	height: 17px;
+}
+.footer  .c-icon-icrlogo{
+	/*left: 56.5%;*/
+	background-position: -600px -96px;
+}
+.footer .icon-copyright{
+	background-position: -623px -96px;
+	/*left: 79.3%;*/
+}
