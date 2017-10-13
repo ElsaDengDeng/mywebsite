@@ -6,27 +6,65 @@
   <title>My website</title>
   <link rel="stylesheet" href="css/semantic.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/myWeb.css" media="screen" title="no title" charset="utf-8">
-  <script type="text/javascript" src="js/semantic.min.js"></script>
 </head>
 
 <body>
   <div class="ui fixed inverted menu">
     <a class="active item">首页</a>
-    <a href="#" class="item">自我介绍</a>
+    <a href="images/deng_2.jpg" class="item">自我介绍</a>
     <a href="#" class="item">掌握技能</a>
-    <a href="#" class="item">项目实战</a>
+    <div class="ui simple dropdown item" href="#" class="item">
+      项目实战
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">
+          HTML+CSS项目实战
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a href="jike.html" class="item">极客学院首页</a>
+            <a href="course.html" class="item">极客课程详情页面</a>
+            <a href="rabbit.html" class="item">CSS3动画——可爱的小兔子</a>
+            <a href="3Dmagic.html" class="item">CSS3 3D动画——3D魔方</a>
+          </div>
+        </div>
+        <div class="item">
+          JavaScript/jQuery项目实战
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a href="calculatorAll2.html" class="item">计算器</a>
+            <a href="fluid.html" class="item">jQuery图片瀑布流布局</a>
+          </div>
+        </div>
+        <div class="item">
+          Vue.js项目实战
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a href="shoping.html" class="item">Shoping购物网站</a>
+            <a href="mobile_list.html" class="item">10MINs博客移动端</a>
+          </div>
+        </div>
+        <div class="item">
+          移动端流式/响应式布局
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a href="jike.html" class="item">百度首页响应式开发</a>
+            <a href="course.html" class="item">京东移动端首页</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="ui vertical basic segment">
     <div class="ui image">
       <img src="images/banner.jpg" alt="" />
     </div>
   </div>
-  <div class="ui container vertical basic segment">
+  <div class="ui container vertical basic segment" style="margin-top:30px;">
     <h3 class="ui header">
-      <i class="ui blue star icon"></i>
+      <i class="ui star icon"></i>
       自我介绍
     </h3>
-    <div class="ui grid">
+    <div class="ui two column stackable grid">
       <div class="four wide column">
         <div class="ui image">
           <a class="ui left corner label" href="#">
@@ -86,52 +124,9 @@
       </div>
     </div>
   </div>
-  <div class="ui divider"></div>
-  <div class="ui container vertical basic segment">
+  <div class="ui container vertical basic segment" style="margin-top:30px;">
     <h3 class="ui header">
-      <i class="ui blue star icon"></i>
-      掌握技能
-    </h3>
-    <div class="ui blue progress">
-      <div class="bar" style="width: 85%;">
-        <div class="progress">熟练 HTML/CSS</div>
-      </div>
-    </div>
-    <div class="ui blue progress">
-      <div class="bar" style="width: 84%;">
-        <div class="progress">熟练 JavaScript/jQuery</div>
-      </div>
-    </div>
-    <div class="ui blue progress">
-      <div class="bar" style="width: 70%;">
-        <div class="progress">熟悉 Vuejs/Agularjs</div>
-      </div>
-    </div>
-    <div class="ui blue progress">
-      <div class="bar" style="width: 70%;">
-        <div class="progress">熟悉 移动端布局/响应式布局</div>
-      </div>
-    </div>
-    <div class="ui blue progress">
-      <div class="bar" style="width: 65%;">
-        <div class="progress">熟悉 python/Django框架</div>
-      </div>
-    </div>
-    <div class="ui blue progress">
-      <div class="bar" style="width: 65%;">
-        <div class="progress">了解 PHP/MySQL后端语言</div>
-      </div>
-    </div>
-    <div class="ui blue progress">
-      <div class="bar" style="width: 60%;">
-        <div class="progress">了解 Grunt/Gulp/FIS3自动化构建工具</div>
-      </div>
-    </div>
-  </div>
-  <div class="ui divider"></div>
-  <div class="ui container vertical basic segment">
-    <h3 class="ui header">
-      <i class="ui blue star icon"></i>
+      <i class="ui  star icon"></i>
       项目实战
     </h3>
     <div class="ui four cards">
@@ -159,6 +154,7 @@
           <a href="#" class="ui tag label">HTML5</a>
         </div>
       </div>
+      <div class="ui divider"></div>
       <div class="card">
         <div class="content">
           <div class="header">
@@ -221,6 +217,49 @@
 
     </div>
   </div>
+  <div class="ui divider"></div>
+  <div class="ui container vertical basic segment" style="margin-top:30px;">
+    <h3 class="ui header">
+      <i class="ui  star icon"></i>
+      掌握技能
+    </h3>
+    <div class="ui blue progress">
+      <div class="bar" style="width: 85%;">
+        <div class="progress">熟练 HTML/CSS</div>
+      </div>
+    </div>
+    <div class="ui blue progress">
+      <div class="bar" style="width: 84%;">
+        <div class="progress">熟练 JavaScript/jQuery</div>
+      </div>
+    </div>
+    <div class="ui blue progress">
+      <div class="bar" style="width: 70%;">
+        <div class="progress">熟悉 Vuejs/Agularjs</div>
+      </div>
+    </div>
+    <div class="ui blue progress">
+      <div class="bar" style="width: 70%;">
+        <div class="progress">熟悉 移动端布局/响应式布局</div>
+      </div>
+    </div>
+    <div class="ui blue progress">
+      <div class="bar" style="width: 65%;">
+        <div class="progress">熟悉 python/Django框架</div>
+      </div>
+    </div>
+    <div class="ui blue progress">
+      <div class="bar" style="width: 65%;">
+        <div class="progress">了解 PHP/MySQL后端语言</div>
+      </div>
+    </div>
+    <div class="ui blue progress">
+      <div class="bar" style="width: 60%;">
+        <div class="progress">了解 Grunt/Gulp/FIS3自动化构建工具</div>
+      </div>
+    </div>
+  </div>
+
 
 
   <div class="ui vertical very padded blue segment footer">
@@ -253,6 +292,8 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/semantic.min.js"></script>
 </body>
 
 </html>
