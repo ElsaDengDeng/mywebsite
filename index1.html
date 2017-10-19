@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>myBlog</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <link rel="stylesheet" href="css/myblog.css">
+</head>
+<body>
+  <header>
+    <!-- <img src="11.jpg" alt=""> -->
+    <div class="relative">
+      <a class="blog_logo" href="">
+        <img src="images/icon_panda.png" alt="">
+      </a>
+      <nav>
+        <ul>
+          <li href="">
+            <a href="">Home</a>
+          </li>
+          <li href="">
+            Tech
+            <i class="arrow-icon"></i>
+            <div class="submenu tech-list">
+              <a href="jike.html">html/css</a>
+              <a href="calculatorAll2.html">javascript</a>
+              <a href="fluid.html">jQuery</a>
+              <a href="mobile_list.html">vuejs</a>
+              <a href="jingdong.html">移动端流式/响应式开发</a>
+              <a href="">php</a>
+              <a href="">python</a>
+            </div>
+          </li>
+          <li href="">
+            Projects
+            <i class="arrow-icon"></i>
+            <div class="submenu tech-list">
+              <a href="jike.html">极客学院首页</a>
+              <a href="3Dmagic.html">CSS3 3D动画——3D魔方</a>
+              <a href="rabbit.html">CSS3动画——可爱的小兔子</a>
+              <a href="calculatorAll2.html">js计算器</a>
+              <a href="fluid.html">jQuery图片瀑布流布局</a>
+              <a href="mobile_list.html">10MINs博客</a>
+              <a href="jingdong.html">京东首页手机端</a>
+            </div>
+            <a href=""></a>
+          </li>
+          <li href=""><a href="images/deng_2.jpg">About me</a></li>
+        </ul> 
+      </nav>
+    </div>
+  </header>
+  <article>
+    <h1>
+      Welcome to my website
+      <div class="sub header">
+        关键字：web前端开发&nbsp;&nbsp;&nbsp;html/css&nbsp;&nbsp;&nbsp;javascript&nbsp;&nbsp;&nbsp;photoshop&nbsp;&nbsp;&nbsp;vue.js&nbsp;&nbsp;&nbsp;python/Diango框架&nbsp;&nbsp;&nbsp;php
+      </div>
+    </h1>
+  </article>
+  <div class="swiper">
+    <div class="cards swiper-container">
+      <ul class="card swiper-wrapper">
+        <li class="swiper-slide">
+          <h4><a href="3Dmagic.html">3D旋转魔方</a></h4>
+          <iframe src="3Dmagic.html" width="100%" scrolling="no" style="overflow: hidden; height: 400px;" frameborder="0"></iframe>
+        </li>
+        <li class="swiper-slide">
+          <h4><a href="rabbit.html">CSS3动画</a></h4>
+          <iframe src="rabbit.html" width="100%" scrolling="no" style="overflow: hidden; height: 400px;" frameborder="0"></iframe>
+        </li>
+        <li class="swiper-slide">
+          <h4><a href="baidu.html">百度首页响应式开发</a></h4>
+          <iframe src="baidu.html" width="100%" scrolling="no" seamless style="overflow: hidden; height: 430px;" frameborder="0"></iframe>
+        </li>
+        <li class="swiper-slide">
+          <h4><a href="calculatorAll2.html">原生JS计算器</a></h4>
+          <iframe src="calculatorAll2.html" width="100%" scrolling="auto" seamless style="overflow: hidden; height: 430px;" frameborder="0"></iframe>
+        </li>
+        <li class="swiper-slide">
+          <h4><a href="jingdong.html">京东手机端首页</a></h4>
+          <iframe src="jingdong.html" width="100%" scrolling="auto" seamless style="overflow: hidden; height: 430px;" frameborder="0"></iframe>
+        </li>
+        <li class="swiper-slide">
+          <h4><a href="mobile_list.html">vuejs应用手机博客</a></h4>
+          <iframe src="mobile_list.html" width="100%" scrolling="auto" seamless style="overflow: hidden; height: 430px;" frameborder="0"></iframe>
+        </li>
+        <li class="swiper-slide">
+          <h4><a href="fluid.html">流式加载图片</a>流式加载图片</h4>
+          <iframe src="fluid.html" width="100%" scrolling="auto" seamless style="overflow: hidden; height: 430px;" frameborder="0"></iframe>
+        </li>
+        <li class="swiper-slide">
+          <h4><a href="shoping.html">vuejs动态添加菜单</a></h4>
+          <iframe src="shoping.html" width="100%" scrolling="auto" seamless style="overflow: hidden; height: 430px;" frameborder="0"></iframe>
+        </li >
+      </ul>
+      <!-- <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul> -->
+    </div>
+    <div class="pagination"></div>
+  </div>
+  
+  
+  <footer></footer>
+  <script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="js/idangerous.swiper.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  <script>
+    var mySwiper = new Swiper('.swiper-container',{
+      pagination: '.pagination',
+      paginationClickable: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      watchActiveIndex: true
+    })
+  </script>
+  <div style="text-align:center;clear:both;">
+  </body>
+  </html>
